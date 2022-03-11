@@ -1,0 +1,33 @@
+mensaje = " hola"
+
+llave = " 1213"
+
+def c(llave, mensaje):
+  return [chr(ord(a) ^ ord(b)) for (a,b) in zip(mensaje, llave)]
+
+cifrado = "".join(c(llave, mensaje))
+
+cifrado
+
+decryted = [chr(ord(a) ^ ord (b)) for (a,b) in zip(cifrado, llave)]
+
+
+"".join(decryted)
+
+def cifrado(mensaje, llave):
+  return mensaje, llave
+
+def decryted(mensaje, llave):
+  return mensaje, llave
+
+def menu(option):
+  if(option == 1):
+    print("El cifrado es: ", cifrado(cifrado, llave))
+  elif(option ==2):
+    print("El decryted es: ", decryted(mensaje, llave))
+
+option = 0
+while(option!=3):
+  print(" 1) cifrar \n 2) descifrar \n 3) Salir")
+  option = int(input("Digite una opcion"))
+  menu(option)
